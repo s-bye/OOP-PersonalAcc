@@ -8,7 +8,13 @@ class PersonalAccount:
     def deposit(self, amount):
         self._balance += amount.amount
         self.transactions.append(amount)
+        print(f"Deposited {amount.amount} / Now your balance is {self._balance}")
 
     def withdraw(self, amount):
         self._balance -= amount.amount
         self.transactions.append(amount)
+        print(f"Withdrew {amount.amount} / Now your balance is {self._balance}")
+
+    def transaction_history(self):
+        for transaction in self.transactions:
+            print(f"{transaction.transaction_type}: {transaction.amount}")
