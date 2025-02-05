@@ -7,16 +7,16 @@ class PersonalAccount:
         self.transactions = transactions
 
     def deposit(self, amount):
-        if amount < 0:
+        if amount.amount < 0:
             print("Amount must be positive!")
             return
-        transaction = Amount(amount, "Deposit")
+        transaction = Amount(amount.amount, "Deposit")
         self._balance += amount.amount
         self.transactions.append(transaction)
         print(f"Deposited {amount.amount} | Now your balance is {self._balance}")
 
     def withdraw(self, amount):
-        if amount > self._balance:
+        if amount.amount > self._balance:
             print(f"Insufficient funds! Your balance is {self._balance}")
             return
         transaction = Amount(amount, "Withdraw")
