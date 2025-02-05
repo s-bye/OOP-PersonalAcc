@@ -3,7 +3,7 @@ class PersonalAccount:
     def __init__(self, account_number: int, account_holder, balance: float, transactions: list):
         self.__account_number = account_number
         self.__account_holder = account_holder
-        self._balance = balance
+        self._balance = 0
         self.transactions = transactions
 
     def deposit(self, amount):
@@ -53,4 +53,3 @@ class PersonalAccount:
     def __sub__(self, amount):
         self.withdraw(amount)
         return self
-    
