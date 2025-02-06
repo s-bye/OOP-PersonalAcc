@@ -16,3 +16,4 @@ if __name__ == "__main__":
     account + Amount(200, "Deposit")
     account - Amount(100, "Withdraw")
     print(account)
+    account.transaction_history()
